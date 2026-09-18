@@ -1,6 +1,6 @@
-# Parent Portal Notice Brief
+# Kidsnote Relay
 
-A privacy-first optional [Hermes Agent](https://github.com/NousResearch/hermes-agent) skill for checking an already logged-in PC parent portal and producing a short brief of actions a parent needs to take.
+A privacy-first optional [Hermes Agent](https://github.com/NousResearch/hermes-agent) skill for checking an already logged-in PC parent portal—including Kidsnote—and producing a short brief of actions a parent needs to take.
 
 ## What it does
 
