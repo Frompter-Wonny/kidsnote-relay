@@ -6,6 +6,7 @@
 
 ## 무엇을 해주나요?
 
+- 요청하면 부모 포털 전용의 **별도 브라우저 프로필** 생성을 안내하거나 도와줍니다. 기본 브라우저의 쿠키·저장된 로그인·개인 탭을 복제하지 않고, 부모가 직접 로그인과 MFA를 완료하는 방식입니다.
 - 화면에서 **로그인된 기관·자녀·반 또는 공지 영역**을 확인한 뒤 공지를 읽습니다.
 - 기본적으로 **확인 당일과 전날에 게시된 공지**를 확인합니다.
 - 공지의 **게시 시각**, 실제 **행사일**, **제출·회신 마감일**을 혼동하지 않도록 분리합니다.
@@ -24,6 +25,14 @@
 - 별도 요청 없이 동의서 제출, 회신, 결제, 예약, 외부 공유를 실행하지 않습니다.
 - 예전 요약이나 알림 미리보기를 최신 공지의 근거로 사용하지 않습니다.
 - 공지에 없는 일반적 준비물·복장 조언을 추측해서 덧붙이지 않습니다.
+
+## 전용 브라우저 프로필 설정
+
+처음 사용할 때는 이렇게 요청할 수 있습니다.
+
+> 키즈노트 확인용 브라우저 프로필을 따로 만들어줘. 로그인은 내가 할게.
+
+스킬은 별도 로컬 프로필(`Parent Portal` 같은 중립적인 이름)을 만들도록 안내합니다. 아이 이름을 프로필 이름에 넣지 않고, 기본 프로필의 쿠키·저장된 로그인·브라우저 동기화를 기본으로 가져오지 않습니다. 비밀번호·OTP·MFA는 반드시 보호자가 직접 입력합니다.
 
 ## 설치
 
@@ -82,6 +91,7 @@ optional-skills/productivity/parent-portal-notice-brief/
 
 ```text
 optional-skills/productivity/parent-portal-notice-brief/SKILL.md
+references/dedicated-browser-setup.md
 references/freshness-and-date-rules.md
 templates/parent-brief-template.md
 tests/fixtures/synthetic-school-notice.md
@@ -102,6 +112,7 @@ A privacy-first optional [Hermes Agent](https://github.com/NousResearch/hermes-a
 
 ### What it does
 
+- On request, helps create or reuse an isolated browser profile for parent portals; the parent completes sign-in and MFA directly.
 - Verifies the visible logged-in portal context before reading notices.
 - Reviews notices posted today and the previous calendar day by default.
 - Separates post time, event date, and deadline.

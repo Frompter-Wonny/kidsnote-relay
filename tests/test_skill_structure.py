@@ -7,12 +7,13 @@ SKILL = ROOT / "optional-skills/productivity/parent-portal-notice-brief/SKILL.md
 README = ROOT / "README.md"
 TEMPLATE = ROOT / "optional-skills/productivity/parent-portal-notice-brief/templates/parent-brief-template.md"
 REFERENCE = ROOT / "optional-skills/productivity/parent-portal-notice-brief/references/freshness-and-date-rules.md"
+BROWSER_SETUP = ROOT / "optional-skills/productivity/parent-portal-notice-brief/references/dedicated-browser-setup.md"
 FIXTURE = ROOT / "tests/fixtures/synthetic-school-notice.md"
 
 
 class SkillStructureTests(unittest.TestCase):
     def test_required_artifacts_exist(self):
-        for path in (SKILL, README, TEMPLATE, REFERENCE, FIXTURE):
+        for path in (SKILL, README, TEMPLATE, REFERENCE, BROWSER_SETUP, FIXTURE):
             self.assertTrue(path.is_file(), path)
 
     def test_frontmatter_is_valid_shape(self):
@@ -33,7 +34,7 @@ class SkillStructureTests(unittest.TestCase):
 
     def test_skill_has_safety_and_freshness_rules(self):
         text = SKILL.read_text(encoding="utf-8")
-        for phrase in ("posted/upload", "OTP", "CAPTCHA", "What to do", "Could not verify"):
+        for phrase in ("posted/upload", "OTP", "CAPTCHA", "MFA", "Dedicated Browser Setup", "What to do", "Could not verify"):
             self.assertIn(phrase, text)
 
     def test_no_machine_local_paths_or_credentials(self):
